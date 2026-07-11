@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Controller mappings — Talea</title>
+  <meta name="description" content="Community controller mappings for Talea. Browse by controller, download, or install with one click inside the app." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/site.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%230C0C0E'/><rect x='3' y='6' width='2' height='4' fill='%23FF6B5C'/><rect x='7' y='3' width='2' height='10' fill='%23EDECE8'/><rect x='11' y='5' width='2' height='6' fill='%23EDECE8'/></svg>" />
+</head>
+<body>
+  <nav class="nav">
+    <div class="wrap nav-inner">
+      <a class="nav-logo" href="./">talea<span class="dot">.</span></a>
+      <div class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="index.html#download">Download</a>
+        <a href="mappings.html" class="active">Mappings</a>
+        <a href="https://github.com/eeeurico/talea">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero wrap" style="padding-bottom: 32px">
+    <h1 style="font-size: clamp(28px, 4vw, 40px)">Controller mappings</h1>
+    <p class="tagline">
+      Community-made MIDI mappings. The easiest way to install one is inside
+      the app — Settings&nbsp;→&nbsp;MIDI&nbsp;→&nbsp;Get&nbsp;mappings — but
+      every mapping here can also be downloaded as a file.
+    </p>
+  </header>
+
+  <section style="border-top: none; padding-top: 0">
+    <div class="wrap">
+      <div class="search-row">
+        <input id="map-search" type="search" placeholder="Search controller or manufacturer…" autocomplete="off" />
+      </div>
+      <div class="map-list" id="map-list">
+        <div class="map-empty" id="map-loading">Loading catalog…</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="wrap">
+      <h2>Install a downloaded mapping</h2>
+      <div class="steps">
+        <div class="step"><span class="n">01</span><p>In Talea, open <strong>Settings → MIDI</strong>.</p></div>
+        <div class="step"><span class="n">02</span><p>Click <strong>Import mapping…</strong> and pick the downloaded <code>.json</code> file (or drop it into the mappings folder shown there).</p></div>
+        <div class="step"><span class="n">03</span><p>Connect your controller and select the mapping — done.</p></div>
+      </div>
+      <h2 style="margin-top: 48px">Share your own</h2>
+      <div class="steps">
+        <div class="step"><span class="n">01</span><p>Map your controller in Talea (MIDI learn does most of the work).</p></div>
+        <div class="step"><span class="n">02</span><p>Open a pull request adding your mapping file to the <a href="https://github.com/eeeurico/talea-mappings" style="color: var(--fg)">talea-mappings</a> repository.</p></div>
+        <div class="step"><span class="n">03</span><p>Once merged it appears here and inside every copy of the app — automatically.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <span>talea<span style="color: var(--accent)">.</span> — open-source DJ software</span>
+      <a href="https://github.com/eeeurico/talea">Source</a>
+      <a href="https://github.com/eeeurico/talea/blob/main/LICENSE">GPL-2.0</a>
+      <a href="https://github.com/eeeurico/talea-mappings">Mappings repo</a>
+    </div>
+  </footer>
+
+  <script src="js/mappings.js"></script>
+</body>
+</html>
