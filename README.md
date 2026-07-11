@@ -2,8 +2,8 @@
 
 The [Talea](https://github.com/eeeurico/talea) website — **https://talea.eurico.ws**
 
-Plain static HTML/CSS/JS, no build step. GitHub Pages serves the repo root
-directly.
+Plain static HTML/CSS/JS, no build step. Deployed on Vercel, which serves
+the repo root as-is.
 
 ## How it stays current with zero maintenance
 
@@ -14,15 +14,17 @@ directly.
 - **Mappings page** renders `index.json` from the
   [`talea-mappings`](https://github.com/eeeurico/talea-mappings) repo —
   the same catalog the in-app mapping browser uses. Merging a mapping PR
-  updates both. Until that repo exists it shows a friendly empty state.
+  updates both.
 
 ## One-time setup
 
-1. **GitHub Pages**: repo Settings → Pages → Source: *Deploy from a branch*,
-   Branch: `main`, folder `/ (root)`.
-2. **DNS**: add a `CNAME` record for `talea.eurico.ws` pointing to
-   `eeeurico.github.io`. The `CNAME` file in this repo tells Pages the
-   custom domain; tick *Enforce HTTPS* once the cert is issued.
+1. **Vercel**: dashboard → Add New… → Project → import
+   `eeeurico/talea-website`. Framework preset *Other*, no build command,
+   output directory left empty (serves the repo root). Every push to
+   `main` deploys.
+2. **Domain**: in the project's Settings → Domains, add
+   `talea.eurico.ws`. `eurico.ws` already uses Vercel DNS, so the record
+   is created automatically.
 
 ## Local preview
 
